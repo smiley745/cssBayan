@@ -5,15 +5,22 @@
 }
 
 
-.name {
-}
-.mem_section {
-}
-.mem_input {
-}
-.mem_name {
-}
-.mem_text {
-}
+.name {}
+
+.mem_section {}
+
+.mem_input {}
+
+.mem_name {}
+
+.mem_text {}
+
 .mem_img {
+    width: 0;
+    transition: all linear 0.5s;
+}
+
+.mem_input:checked~label .mem_img,
+.mem_section:hover .mem_img {
+    width: 20em;
 }
