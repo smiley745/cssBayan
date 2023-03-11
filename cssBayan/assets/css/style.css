@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+.name {
+}
+.mem_section {
+}
+.mem_input {
+}
+.mem_name {
+}
+.mem_text {
+}
+.mem_img {
+}
