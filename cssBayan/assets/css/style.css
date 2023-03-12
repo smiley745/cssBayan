@@ -5,17 +5,19 @@
 }
 
 body {
-    margin: 0 auto;
-    width: 60%;
+    margin: 2rem auto;
+    width: 50vw;
+    font-family: 'Outfit', sans-serif;
+    font-weight: bold;
 }
 
-h1 {
-    font-size: 4em;;
+.name {
+    font-size: 2em;
+    padding: 1rem 0;
 }
-.name {}
 
 .mem_section {
-    border-top: 0.1em solid rgb(83, 83, 83);
+    border-top: 0.1em solid rgb(175, 175, 175);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,27 +29,70 @@ h1 {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    color: blue;
+    font-size: 1rem;
+    padding: 1rem 0;
 }
 
 .mem_text {}
 
-.mem_img_label{
+.mem_img_label {
     display: flex;
     justify-content: center;
     width: 100%;
 }
+
 .mem_img {
     width: 0;
-    transition: all linear 0.5s;
+    transition: all ease 0.5s;
 }
 
-.mem_input:checked~label .mem_img,
-.mem_section:hover .mem_img {
-    width: 20em;
+.mem_section:active,
+.mem_section:active .mem_text,
+.mem_section:active .cross {
+    color: blue;
+    opacity: 0.8;
+    transition: 0.1s ease-in;
 }
+
+.mem_section:active .cross {
+    background: url('../images/svg/cross_blue.svg') center no-repeat;
+}
+
+.cross {
+    background: url('../images/svg/cross.svg') center no-repeat;
+    opacity: 0;
+    width: 2em;
+    scale: 2;
+}
+
+.mem_input:checked~label .mem_img {
+    width: 20em;
+    margin-bottom: 1rem;
+}
+
+.mem_section:hover .mem_img {
+    width: 5em;
+    margin-bottom: 1rem;
+}
+
+.mem_input:checked~label .mem_text {
+    color: black;
+}
+
 
 .mem_input:checked~label .cross,
-.mem_section:hover .cross{
+.mem_section:hover .cross {
     transform: rotate(-45deg);
-    transition: all linear 0.5s;
+    transition: transform linear 0.2s;
+}
+
+
+
+main:hover .mem_name {
+    color: black;
+}
+
+main:hover .cross {
+    opacity: 1;
 }
